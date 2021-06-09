@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.ui.TestingLogin">
+      <class name="test.ui.Assertion">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="typeInSearchBar"/>
+          <include name="compareText"/>
         </methods>
-      </class> <!-- test.ui.TestingLogin -->
+      </class> <!-- test.ui.Assertion -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
