@@ -2,7 +2,10 @@ package test.ui;
 
 import java.time.Duration;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -20,4 +23,15 @@ public class Assertion {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
+
+	@Test(priority = 2)
+	public void compareText() {
+
+		String expectedTitle = "A/B Test Variation 1";
+		WebElement title = driver.findElement(By.tagName("h3"));
+		String actualTitle = title.getText();
+		Assert.assertEquals(actualTitle, expectedTitle);
+
+	}
+
 }
