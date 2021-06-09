@@ -5,8 +5,8 @@
     <classes>
       <class name="test.ui.TestingLogin">
         <methods>
-          <include name="typeInSearchBar"/>
           <include name="closeBrowser"/>
+          <include name="typeInSearchBar"/>
         </methods>
       </class> <!-- test.ui.TestingLogin -->
     </classes>
