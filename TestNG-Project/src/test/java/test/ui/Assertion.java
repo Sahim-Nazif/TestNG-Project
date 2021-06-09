@@ -34,4 +34,10 @@ public class Assertion {
 
 	}
 
+	@Test(priority = 3)
+	public void closeBrowser() {
+
+		driver.close();
+	}
+
 }
