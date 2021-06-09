@@ -14,7 +14,7 @@ public class TestingLogin {
 
 	public WebDriver driver;
 
-	@Test(priority = 1)
+	@Test(priority = 1, description = "Driver setup")
 	public void webDriverSetup() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
