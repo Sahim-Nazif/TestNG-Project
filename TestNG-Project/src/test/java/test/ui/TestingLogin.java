@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestingLogin{
+public class TestingLogin {
 
 	public WebDriver driver;
 
@@ -19,12 +19,13 @@ public class TestingLogin{
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/login");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
 
 	@Test(priority = 2)
 	public void typeInSearchBar() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 		WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));
 		userName.sendKeys("tomsmith");
 		WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
@@ -33,9 +34,10 @@ public class TestingLogin{
 		WebElement btn = driver.findElement(By.xpath("//button[@type='submit']"));
 
 		btn.click();
-		closeBrowser();
+
 	}
 
+	@Test(priority = 3)
 	public void closeBrowser() {
 		driver.close();
 	}
