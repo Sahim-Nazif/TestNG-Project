@@ -1,4 +1,4 @@
-package test.ui;
+package functional.test;
 
 import java.time.Duration;
 
@@ -25,13 +25,26 @@ public class GroupsByTestTypes {
 	}
 
 	@Test(priority = 2, groups = "regression")
-	public void functionalTesting() {
+	public void functionalTestingOne() {
 
 		WebElement number = driver.findElement(By.xpath("//input[@type='number']"));
 
 		number.sendKeys("3");
 		delayRun(3000);
-		driver.close();
+
+	}
+
+	@Test(priority = 3, groups = "regression")
+	public void functionalTestingTwo() {
+
+		// check if link is working
+		WebElement link = driver.findElement(By.xpath("//a[normalize-space()='Elemental Selenium']"));
+		link.click();
+		delayRun(2000);
+		driver.quit();
+	}
+
+	public void checkLoginTitle() {
 
 	}
 

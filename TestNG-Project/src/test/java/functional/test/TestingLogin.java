@@ -1,4 +1,4 @@
-package test.ui;
+package functional.test;
 
 import java.time.Duration;
 
