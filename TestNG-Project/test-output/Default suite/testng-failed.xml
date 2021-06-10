@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.ui.GroupsByTestTypes">
+      <class name="functional.test.GroupsByTestTypes">
         <methods>
-          <include name="delayRun"/>
+          <include name="checkPageTitle"/>
         </methods>
-      </class> <!-- test.ui.GroupsByTestTypes -->
+      </class> <!-- functional.test.GroupsByTestTypes -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
