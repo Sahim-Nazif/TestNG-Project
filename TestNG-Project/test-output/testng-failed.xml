@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.ui.Assertion">
+      <class name="test.ui.GroupsByTestTypes">
         <methods>
-          <include name="compareText"/>
+          <include name="delayRun"/>
         </methods>
-      </class> <!-- test.ui.Assertion -->
+      </class> <!-- test.ui.GroupsByTestTypes -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
