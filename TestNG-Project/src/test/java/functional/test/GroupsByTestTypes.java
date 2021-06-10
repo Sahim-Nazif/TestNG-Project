@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -14,7 +15,7 @@ public class GroupsByTestTypes {
 
 	public WebDriver driver;
 
-	@Test(priority = 1, description = "Driver setup")
+	@Test(priority = 1, groups = "smoke", description = "Driver setup")
 	public void webDriverSetup() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -44,7 +45,13 @@ public class GroupsByTestTypes {
 		driver.quit();
 	}
 
-	public void checkLoginTitle() {
+	@Test(priority = 2, groups = "smoke")
+	public void checkPageTitle() {
+
+		String expectedTitle = "Inputs";
+		WebElement inputTitle = driver.findElement(By.tagName("h3"));
+		String actualTitle = inputTitle.getText();
+		Assert.assertEquals(actualTitle, expectedTitle, "Result matches");
 
 	}
 

@@ -3,6 +3,11 @@
 <suite name="Failed suite [Functional Tests]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Regression(failed)">
     <classes>
+      <class name="functional.test.GroupsByTestTypes">
+        <methods>
+          <include name="checkLoginTitle"/>
+        </methods>
+      </class> <!-- functional.test.GroupsByTestTypes -->
       <class name="functional.test.Assertion">
         <methods>
           <include name="compareText"/>
