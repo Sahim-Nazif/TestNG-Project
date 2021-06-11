@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="functional.test.GroupsByTestTypes">
+      <class name="functional.test.DataProviderTest">
         <methods>
-          <include name="checkPageTitle"/>
+          <include name="driverSetup"/>
         </methods>
-      </class> <!-- functional.test.GroupsByTestTypes -->
+      </class> <!-- functional.test.DataProviderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
